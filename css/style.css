@@ -24,6 +24,11 @@ body{
   color: #F3F3F3;
   text-shadow: 1px 1px 10px #000;
 }
+@media screen and (max-width: 1024px) {
+  body {
+    background-position: center;
+  }
+}
 
 .landingText {
   display: block;
