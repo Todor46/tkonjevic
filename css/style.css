@@ -1,0 +1,56 @@
+/* colors */
+.dark       {color: #4A4A4A}
+.primary    {color: #FFCD38}
+.secondary  {color: #FFDD67}
+.light      {color: #F3F3F3}
+
+.bgd-dark       {background-color: #4A4A4A}
+.bgd-primary    {background-color: #FFCD38}
+.bgd-secondary  {background-color: #FFDD67}
+.bgd-light      {background-color: #F3F3F3}
+
+
+
+html{
+  height: 100%;
+  position: relative;
+}
+body{
+  height: 100%;
+  margin: 0;
+  position: relative;
+  background-image: url('../img/background1.jpg');
+  background-size: cover;
+  color: #F3F3F3;
+}
+
+.landingText {
+  display: block;
+  font-size: 30px;
+  position: absolute;
+  top: 80%;
+}
+
+.container {
+  height: 50%;
+}
+
+#links {
+  font-size: 20px;
+  list-style: none;
+  bottom: 20px;
+  position: absolute;
+}
+#links li {
+  display: inline;
+  margin-right: 40px;
+}
+
+#links a {
+  text-decoration: none;
+  color: #FFCD38;
+}
+
+#links a:hover, a:focus {
+  color: #FFDD67;
+}
