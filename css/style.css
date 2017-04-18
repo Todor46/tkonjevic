@@ -22,13 +22,21 @@ body{
   background-image: url('../img/background1.jpg');
   background-size: cover;
   color: #F3F3F3;
+  text-shadow: 1px 1px 10px #000;
 }
 
 .landingText {
   display: block;
-  font-size: 30px;
   position: absolute;
-  top: 80%;
+  top: 60%;
+}
+
+.landingText h2 {
+  font-size: 30px;
+}
+.landingText p {
+  font-size: 22px;
+  font-weight: 300;
 }
 
 .container {
@@ -53,4 +61,10 @@ body{
 
 #links a:hover, a:focus {
   color: #FFDD67;
+}
+
+.logo {
+  position: absolute;
+  width: 50px;
+  margin: 10px;
 }
