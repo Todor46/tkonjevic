@@ -1,16 +1,33 @@
+$.fn.animateRotate = function(angle, duration, easing, complete) {
+  var args = $.speed(duration, easing, complete);
+  var step = args.step;
+  return this.each(function(i, e) {
+    args.complete = $.proxy(args.complete, e);
+    args.step = function(now) {
+      $.style(e, 'transform', 'rotate(' + now + 'deg)');
+      if (step) return step.apply(e, arguments);
+    };
 
+    $({deg: 0}).animate({deg: angle}, args);
+  });
+};
 
-$(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
+$( ".portofolioTrigger" ).click(function() {
+  $( ".yellowSection" ).animate({
+    left: "+=50%"
+  }, 400, function() {
+    $('.portofolio').animate({
+      top: "-=100%"
+    },400)
   });
 });
+
+$(".fa-times").click(function(){
+  $('.portofolio').animate({
+    top: "+=100%"
+  },400,function (){
+    $('.yellowSection').animate({
+      left: "-=50%"
+    },400)
+  })
+})

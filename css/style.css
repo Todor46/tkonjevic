@@ -19,10 +19,10 @@ body{
   height: 100%;
   margin: 0;
   position: relative;
-  background-image: url('../img/background1.jpg');
+  background: #4A4A4A;
   background-size: cover;
   color: #F3F3F3;
-  text-shadow: 1px 1px 10px #000;
+  overflow: hidden;
 }
 @media screen and (max-width: 1024px) {
   body {
@@ -34,6 +34,8 @@ body{
   display: block;
   position: absolute;
   top: 60%;
+  text-shadow: 1px 1px 10px #000;
+  z-index: 1;
 }
 
 .landingText h2 {
@@ -53,6 +55,7 @@ body{
   list-style: none;
   bottom: 20px;
   position: absolute;
+  z-index: 1;
 }
 #links li {
   display: inline;
@@ -72,4 +75,112 @@ body{
   position: absolute;
   width: 50px;
   margin: 10px;
+}
+
+.yellowSection {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 60%;
+  top: 70%;
+  background: #FFCD38;
+  transform: rotate(-45deg);
+  z-index: 0;
+}
+
+.yellowBar {
+  width: 100%;
+  height: 300px;
+  background: #FFCD38;
+  top: -340px;
+  position: absolute;
+}
+.sm {
+  display: none;
+}
+
+@media screen and (max-width: 1024px){
+  .yellowBar{
+    display: none;
+  }
+  .yellowSection {
+    display: none;
+  }
+  .sm {
+    display: block;
+  }
+}
+
+.portofolioBtn {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%,0%);
+}
+
+.portofolio {
+  position: absolute;
+  top: 100%;
+  height: 100%;
+  width: 100%;
+  background: #FFCD38;
+  z-index: 2;
+  overflow: auto;
+}
+
+.fa-times {
+  right: 10px;
+  top: 10px;
+  position: absolute;
+  font-size: 30px!important;
+  color: #4A4A4A;
+}
+
+.button {
+  color: #FFCD38;
+  background: #4A4A4A;
+  border-color: #4A4A4A;
+}
+.button:hover, .button:focus {
+  color: #FFDD67;
+  border-color: #4A4A4A;
+}
+
+.thumbs {
+  padding-top: 40px;
+}
+
+.thumbs img {
+  max-width: 100%;
+}
+.thumbImg {
+  height: 200px;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  transition: transform 0.3s;
+}
+
+.thumbImg:hover {
+  transform: scale(1.1);
+}
+
+.thumbs a {
+  color: #4A4A4A;
+  text-decoration: none;
+  text-align: center;
+}
+
+.project {
+  overflow-y: auto;
+}
+
+.project {
+  padding: 10px;
+}
+
+.lity-close {
+  right: 15px;
 }
