@@ -184,3 +184,5 @@ body{
 .lity-close {
   right: 15px;
 }
+
+div#preload { display: none; }   /* Preloading images
